@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimization Practices &#8212; ESIP CCC Knowledge Base</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Factors Influencing Optimization Decisions" href="factors-for-decisions.html" />
+    <link rel="prev" title="Resources for Cloud Data Optimization" href="resources-for-optimization.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ESIP CCC Knowledge Base</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   ESIP CCC Knowledge Base
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="optimization-guidance.html">
+   Cloud Data Optimization Guidance
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="resources-for-optimization.html">
+     Resources for Cloud Data Optimization
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Optimization Practices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="factors-for-decisions.html">
+     Factors Influencing Optimization Decisions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="antipatterns.html">
+     Antipatterns (e.g. what doesn’t work)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="case-studies.html">
+   Case Studies!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/optimization-practices.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/abarciauskas-bgse/esip-ccc-knowledge-base"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/abarciauskas-bgse/esip-ccc-knowledge-base/issues/new?title=Issue%20on%20page%20%2Foptimization-practices.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chunking">
+   Chunking
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chunk-size">
+     Chunk Size
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chunk-compression-and-filtering">
+     Chunk Compression and Filtering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chunk-shape">
+     Chunk Shape
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-management-considerations">
+   Data Management Considerations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#provenance-and-data-citation">
+     Provenance and Data Citation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-discovery">
+   Data Discovery
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storage-tiers">
+   Storage Tiers
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="optimization-practices">
+<h1>Optimization Practices<a class="headerlink" href="#optimization-practices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="chunking">
+<h2>Chunking<a class="headerlink" href="#chunking" title="Permalink to this headline">¶</a></h2>
+<p>Cloud-performant data is all about the chunks and less about the format.  You just need  consolidated metadata, a reasonable chunk size, reasonable compression, and attention to your chunk shape relative to expected access patterns.</p>
+<p>The actual format you use matters less. Because the cloud supports many concurrent access from the same storage object, reading chunks from separate  objects (e.g. sharded approaches like Zarr) or reading chunks via byte-ranges from a single object performs about the same.</p>
+<p>Issues that need addressing:</p>
+<ul class="simple">
+<li><p>write performance – clearly parallel write is easier with sharded formats like Zarr.</p></li>
+<li><p>representing data cubes using formats like COG, which force a dimension of 1 in the time dimension?</p></li>
+</ul>
+<p>For many file formats, including HDF, NetCDF, and Zarr, chunks constitute the smallest unit of data within a file that can be read at once, as they are typically compressed.  Reading a chunk of data incurs a latency cost, so chunk sizes ought not be too small or performance will suffer.</p>
+<p>Reading a chunk of data also incurs a data transfer and decoding cost, and entire chunks must be read (if they are compressed).  If chunks are too large (for example, one chunk for the entire dataset), there will be too much data transfer and decoding for common use cases, and bytes may need to be stored in slower memory locations.</p>
+<p>Regarding chunk shape, it should be chosen to optimize performance for expected access patterns.  The optimal chunk size shape depends on expected access, but it also varies with the latency and throughput of the data store. For data in cloud storage, the latter characteristics can be dramatically different from data stored on a local disk. Chunk size for cloud stores therefore needs careful consideration and cannot easily rely on non-cloud rules of thumb.</p>
+<div class="section" id="chunk-size">
+<h3>Chunk Size<a class="headerlink" href="#chunk-size" title="Permalink to this headline">¶</a></h3>
+<p>A chunk size should be selected that is large in order to reduce the number of tasks that parallel schedulers like Dask have to think about (which affects overhead) but also small enough so that many of them can fit in memory at once. The Pangeo project has been recommending a chunk size of about 100MB, which originated from the Dask Best Practices. The Zarr Tutorial recommends a chunk size of at least 1MB. The Amazon S3 Best Practices says the typical size for byte-range requests is 8-16MB. It would seem that chunk sizes on the order of 10MB or 100MB are most optimal for Cloud usage.</p>
+</div>
+<div class="section" id="chunk-compression-and-filtering">
+<h3>Chunk Compression and Filtering<a class="headerlink" href="#chunk-compression-and-filtering" title="Permalink to this headline">¶</a></h3>
+<p>The particular compression scheme is less important than just having some kind of compression.  ZLIB (DEFLATE) is probably the most commonly used, mostly because it’s widely supported by software.   Some schemes are clearly better than ZLIB for certain use cases, however, and many are supported in the Blosc compression library ( written in C and therefore available in languages like Python, R, Java, Julia).  The default Blosc compression scheme used by Xarray when writing Zarr is the “LZ4” scheme, a result of the benchmarking reported in a blog post by Alistair Miles, where he said “for speed you can’t beat LZ4, but Zstd+Bitshuffle gives a very high compression ratio with good all-round performance default compression scheme etc.”</p>
+</div>
+<div class="section" id="chunk-shape">
+<h3>Chunk Shape<a class="headerlink" href="#chunk-shape" title="Permalink to this headline">¶</a></h3>
+<p>Once the chunk size is chosen, the chunk shape should be chosen to minimize the number of chunks that need to be read for expected access patterns.  For example, the optimal chunk shape for a time stack of remote sensing images (a data cube) might be rods with many points in the time dimension and few points in the spatial dimensions if time series extraction is the dominant expected access pattern.   If both time series extraction and spatial map extraction at fixed points in time are common expected access patterns, the chunk shape might be picked so the number of chunks extracted in each case is the same.</p>
+</div>
+</div>
+<div class="section" id="data-management-considerations">
+<h2>Data Management Considerations<a class="headerlink" href="#data-management-considerations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="provenance-and-data-citation">
+<h3>Provenance and Data Citation<a class="headerlink" href="#provenance-and-data-citation" title="Permalink to this headline">¶</a></h3>
+<p>One complication of reformatting data into a cloud optimized format is tracking data provenance back to the source data. This is particularly an issue in citing data in science data papers. Ideally, the source data should be referenced, to provide proper credit to the data provider and because documents describing the data and its production (e.g. Algorithm Theoretical Basis Documents) typically refer to the source data. However, it would also be desirable to note that data used in a study or application was in fact the reformatted / restructured dataset.</p>
+<p>Key questions are:</p>
+<ul class="simple">
+<li><p>Should derived and original data have their own DOIs?  Ideally yes.</p></li>
+<li><p>Are there any patterns for maintaining the linkage?  The STAC derived-from link may serve as a model.</p></li>
+</ul>
+<p>Remaining questions are:</p>
+<ul class="simple">
+<li><p>How to deal with reformatted datasets that are not exactly the same as the source data?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="data-discovery">
+<h2>Data Discovery<a class="headerlink" href="#data-discovery" title="Permalink to this headline">¶</a></h2>
+<p>Some approaches to cloud optimized data may force a re-evaluation of data discovery. Many current data systems provide discovery for file-based archives that includes a search for files matching a user’s region of interest. However, some data reorganizations into optimized structures and formats (e.g., Zarr, Entwine Point Tiles) can abstract the file arrangement from the users when aggregated over one or more dimensions, such as time. This has the benefit of providing a simpler data domain for the user to navigate and access, but also renders file-based searching irrelevant to the discovery process. (However, file-based searching may be relevant in the provenance aspect.)</p>
+</div>
+<div class="section" id="storage-tiers">
+<h2>Storage Tiers<a class="headerlink" href="#storage-tiers" title="Permalink to this headline">¶</a></h2>
+<p>As datasets reach peta-scale size and growth across many sciences, the expense of permanent storage versus immediate accessibility becomes problematic.  A recent paper (Carrasco-Kind, et al, 2020: <a class="reference external" href="http://hdl.handle.net/2142/107186">http://hdl.handle.net/2142/107186</a>) discussed the implementation of a ‘carousel’ model of data access that permitted bulk recovery of cold-stored datasets on inexpensive archival storage to be staged to available disk through asynchronous standing orders for data.  This is one of perhaps many practical solutions that technologists are thinking about right now as they plan to move their data to the cloud.</p>
+<p>Surely, many data repositories moving to the cloud will need to consider having at least two tiers of object store to ensure cost-effectiveness, availability, and durability of scientific data.  The primary tier will be an always-available, on-disk object store that is synchronously accessible.  The secondary tier would be a form of cold store that allows time-delayed access to datasets, pushed to a primary data tier for a limited time to allow for availability to requesters.</p>
+<p>Beyond archival data stores, a cloud platform will need to consider the support of more mutable forms of storage, some persistent (databases) and others transient (a session work space).  Mutable data stores, whether file store or block store, serve to support the curation and dissemination of data that is kept resident in scalable object storage.  The size and lifetime of these data stores must be given careful consideration as their cost of usage greatly outsizes that of object storage.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="resources-for-optimization.html" title="previous page">Resources for Cloud Data Optimization</a>
+    <a class='right-next' id="next-link" href="factors-for-decisions.html" title="next page">Factors Influencing Optimization Decisions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Earth Science Information Partners (ESIP) Cloud Computing Cluster (CCC)<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
