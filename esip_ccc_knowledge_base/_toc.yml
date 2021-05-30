@@ -1,0 +1,12 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro
+- file: optimization-guidance
+  sections:
+  - file: resources-for-optimization
+  - file: optimization-practices
+  - file: factors-for-decisions
+  - file: antipatterns
+- file: case-studies
+- file: contributing
