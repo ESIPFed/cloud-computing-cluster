@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -227,6 +227,8 @@
 <p>Links to example code!</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://gist.github.com/rsignell-usgs/b6bd959712547101acd8ac3ddaf2daab">Compare four ways to read COAWST coastal model output</a>: Gist by &#64;rsignell-usgs compares performance of opening and computing the mean across NetCDF4 and Zarr S3 file stores using h5netcdf or fsspec libraries.</p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/gist/rsignell-usgs/011e4de62e8db366bb6505c0d4c48ca6">NWM ReferenceFileSystem JSON</a>: Jupyter Notebook by &#64;rsignell-usgs creates ReferenceFileSystem JSON file for a collection of NWM NetCDF files on S3.</p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/gist/rsignell-usgs/649cdce96bfad15dea68fffc5925060e">Read NWM Forecast “Best Time Series”</a>: Jupyter Notebook by &#64;rsignell-usgs uses fsspec’s <a class="reference external" href="https://filesystem-spec.readthedocs.io/en/latest/api.html#fsspec.implementations.reference.ReferenceFileSystem">ReferenceFileSystem</a> to read data from 300 NWM Forecast netcdf files on AWS Public Dataset as a single virtual dataset. Uses <code class="docutils literal notranslate"><span class="pre">tau=0</span></code> for each forecast in the past + the latest forecast to construct the best time series virtual dataset. The only new file we created was the JSON file that points to the original NetCDF files, reads that JSON with the Zarr library.</p></li>
 <li><p><a class="reference external" href="https://github.com/pangeo-gallery/osm2020tutorial">Pangeo Tutorial materials for AGU Ocean Sciences 2020</a>: This repository tutorial materials for a 30 min workshop that showcase Pangeo data analysis on the cloud.</p></li>
 </ul>
 </div>
@@ -254,12 +256,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="antipatterns.html" title="previous page">Antipatterns (e.g. what doesn’t work)</a>
-    <a class='right-next' id="next-link" href="contributing.html" title="next page">Contributing</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="antipatterns.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Antipatterns (e.g. what doesn’t work)</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="contributing.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Contributing</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
