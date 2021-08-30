@@ -4,7 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: intro
 - file: optimization-guidance
   sections:
   - file: resources-for-optimization
